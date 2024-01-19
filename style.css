@@ -1,0 +1,284 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, "Segoe UI Variable", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #ffffff;
+    background-color: hsl(219, 28%, 12%);
+}
+
+.center {
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mw {
+    max-width: 40rem;
+}
+
+.t {
+    color: #5d8bf5;
+}
+
+h1.big {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.big {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.semi-big {
+    font-size: 15px;
+}
+
+/* make nice looking navbar */
+.navbar {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar a {
+    color: #5d8bf5;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #97b7ff;
+}
+
+.navbar .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .right a {
+    font-weight: 550;
+    padding: 0 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 550px) {
+    .navbar .right {
+        margin-right: 26px;
+    }
+}
+
+.navbar .menu-toggle {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section:nth-child(odd) {
+    background-color: hsl(222, 25%, 8%);
+}
+
+.section:nth-child(even) {
+    background-color: hsl(219, 28%, 12%);
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2rem;
+    min-height: 400px;
+}
+
+.section img {
+    width: 450px;
+    filter: /*drop-shadow(0px 3px 5px #00000083)*/ drop-shadow(0.3rem 0.3rem #252d395b);
+    border-radius: 6px;
+    max-width: 92vw;
+}
+
+
+
+/* .section even and odd */
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+.section:nth-child(odd) {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section:nth-child(even) img {
+    transform: rotate(-1deg);
+}
+
+.section:nth-child(odd) img {
+    transform: rotate(1deg);
+}
+
+@media (min-width: 1320px) {
+    .section:nth-child(odd):not(:nth-child(1)) * {
+        text-align: right;
+    }
+
+    .section:nth-child(even) * {
+        text-align: left;
+    }
+}
+
+@media (max-width: 1320px) {
+    .section:nth-child(odd):not(:nth-child(1)) * {
+        text-align: center;
+    }
+
+    .section:nth-child(even) * {
+        text-align: center;
+    }
+
+    .section {
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+        /* gap: 1rem;
+        padding: 1.5rem 0; */
+        min-height: 30rem;
+    }
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+.logo {
+    color: white !important;
+    font-weight: bold;
+    margin-left: 14px;
+}
+
+.logo svg {
+    margin-right: auto;
+}
+
+.btn.primary {
+    background-color: #184abf;
+    color: #ffffff;
+    padding: 0.75rem 2.5rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    appearance: none;
+    font: inherit;
+    cursor: pointer;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+}
+
+.footer a,
+article a {
+    color: hsl(222, 85%, 59%);
+    text-decoration: none;
+}
+
+.footer a:hover,
+article a:hover {
+    text-decoration: underline;
+    color: hsl(222, 85%, 59%);
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color: hsl(219, 28%, 12%);
+}
+
+body,
+.section:nth-child(1) {
+    background: transparent !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body::before {
+    background: url("./assets/images/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 482px;
+    z-index: -1;
+    content: "";
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(219, 28%, 12%);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader>svg {
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+a.selected,
+a.selected:hover {
+    color: #ffffff;
+}

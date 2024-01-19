@@ -1,0 +1,20 @@
+<svg width="1280" height="400" viewBox="0 0 1280 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_1294_621)">
+    <rect width="1280" height="400" fill="#0F1219"/>
+    <g style="mix-blend-mode:screen" opacity="0.05">
+    <circle cx="640" cy="200" r="229.767" stroke="white" stroke-width="39.1602"/>
+    </g>
+    <g style="mix-blend-mode:screen" opacity="0.05">
+    <circle cx="640" cy="200" r="371.623" stroke="white" stroke-width="44.7546"/>
+    </g>
+    <g style="mix-blend-mode:screen" opacity="0.05">
+    <circle cx="640" cy="200" r="110.688" stroke="white" stroke-width="27.9716"/>
+    </g>
+    </g>
+    <defs>
+    <clipPath id="clip0_1294_621">
+    <rect width="1280" height="400" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+    
