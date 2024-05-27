@@ -90,6 +90,12 @@ a {
   cursor: var(--cursor-pointer), auto;
 }
 
+.midsmall {
+  flex-basis: 100%;
+  text-align: center !important;
+  opacity: 0.6;
+}
+
 @media (max-width: 550px) {
   .navbar .right {
     margin-right: 26px;
@@ -242,7 +248,7 @@ article a:hover {
 .footer {
   padding: 10px;
   text-align: center;
-  background-color: hsl(219, 28%, 12%);
+  background-color: hsl(219, 30%, 9%);
 }
 
 body,
