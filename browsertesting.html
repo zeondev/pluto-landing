@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pluto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
@@ -26,10 +26,13 @@
         loader.remove();
       });
     </script>
-    <meta property="og:title" content="Pluto • FAQ" />
+    <meta
+      property="og:title"
+      content="Pluto • The web OS that runs in your browser."
+    />
     <meta
       property="og:description"
-      content="View a summary of frequently asked questions for Pluto."
+      content="Welcome to Pluto, a “web operating system” focused on productivity, security and privacy."
     />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://pluto.zeon.dev" />
@@ -38,10 +41,13 @@
       content="https://pluto.zeon.dev/assets/images/banner.png"
     />
     <meta name="twitter:site" content="My Website" />
-    <meta name="twitter:title" content="Pluto • FAQ" />
+    <meta
+      name="twitter:title"
+      content="Pluto • The web OS that runs in your browser."
+    />
     <meta
       name="twitter:description"
-      content="View a summary of frequently asked questions for Pluto."
+      content="Welcome to Pluto, a “web operating system” focused on productivity, security and privacy."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -53,16 +59,49 @@
   </head>
 
   <body>
+    <p id="H" style="display:none"></p>
+    <div style="display:none" id="arrayCode">
+        function h()
+        {
+        var x = [1,2,3];
+        if (x.find)
+        {
+        var result = x.find(
+        function(i)
+        {
+        console.log(i);
+        if (i === 1)
+        {
+        return true
+        }
+        else
+        {
+        return false
+        }
+        }
+        );
+
+        if (result === 1) { return true }
+        else { return false }
+        }
+        else
+        {
+        return false
+        }
+        };
+
+        h();
+    </div>
     <nav class="navbar">
       <div class="left">
-        <a href="" class="logo">
+        <a href class="logo">
           <em>pluto</em>
         </a>
       </div>
       <div class="right">
-        <a href="/">Home</a>
-        <a href="/faq.html" class="selected">FAQ</a>
-        <a href="/browsertesting.html">Tester</a>
+        <a href="/" >Home</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/browsertesting.html" class="selected">Tester</a>
 
         <a href="https://pluto-app.zeon.dev">Try it</a>
       </div>
@@ -71,48 +110,34 @@
     <article class="sections-container">
       <section class="section">
         <div class="center">
-          <h1 class="big">Frequently Asked Questions</h1>
+          <h1 class="big">Browser Testing</h1>
         </div>
       </section>
       <section class="section">
         <div class="mw">
-          <h2 class="big">How was Pluto built?</h2>
+          <h2 class="big">Pluto Compatibility Tester</h2>
           <p class="semi-big">
-            Pluto is built with standard JavaScript using the dynamic imports
-            feature included in recent JavaScript versions, and a custom "core"
-            that handles loading of code as processes.
+            <pre id="log"></pre>
           </p>
+        <p>If any of these fail Pluto will</p>
+        <ul>
+          <li>show a black screen.</li>
+          <li>crash more.</li>
+          <li>be less secure.</li>
+          <!-- <li>be less private.</li> -->
+        </ul>
         </div>
-        <img src="./assets/images/javascript.svg" />
-      </section>
-      <section class="section">
-        <div class="mw">
-          <h2 class="big">Who made this?</h2>
-          <p class="semi-big">
-            Pluto is created by Zeon. It is an open source project with many
-            contributors. You can find the source code on
-            <a href="https://github.com/zeondev/pluto">GitHub</a>.
-          </p>
-        </div>
-        <img src="./assets/images/github.png" />
-      </section>
-      <section class="section">
-        <div class="mw">
-          <h2 class="big">What's the point of this?</h2>
-          <p class="semi-big">
-            Pluto is a project that aims to provide a desktop experience to any
-            browser. It contains many features and applications built-in, as
-            well as an app store to download more applications. It is also open
-            source, so anyone can contribute to it.
-          </p>
-        </div>
-        <img src="./assets/images/desktop.png" />
+        <img src="./assets/images/javascript.svg" style="border-radius: 4px" />
       </section>
       <footer class="footer">
         <p class="semi-big">
-          &copy; <a href="https://zeon.dev">zeon.dev</a> 2024
+          &copy; <a href="https://zeon.dev">zeon.dev</a> 2024 &mdash; All rights
+          reserved.
         </p>
       </footer>
     </article>
   </body>
+  <script defer src="./browsertesting.js">
+
+  </script>
 </html>
